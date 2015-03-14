@@ -21,4 +21,13 @@
         android:layout_height="230px"
         android:src="@drawable/icon" >
     </ImageView>
+    <TextView
+        android:id="@+id/grid_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:padding="1dp"
+        android:gravity="center"
+        />
 </LinearLayout>
