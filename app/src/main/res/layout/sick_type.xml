@@ -9,13 +9,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="ป่วยอะไร"
-        android:layout_marginTop="300px"
+        android:text="วันนี้ป่วยอะไร ? "
+        android:layout_marginTop="20px"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="บันทึก"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal" />
 
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:layout_gravity="center_horizontal" />
 
 
 </LinearLayout>
