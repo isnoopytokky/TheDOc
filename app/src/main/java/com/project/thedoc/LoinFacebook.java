@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.facebook.AppEventsLogger;
@@ -32,8 +34,20 @@ public class LoinFacebook  extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_facebook);
 
+        Button authButton = (Button) findViewById(R.id.authButton);
+
+        authButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoinFacebook.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
-    public static class PlaceholderFragment extends Fragment {
+
+   /*
+        public static class PlaceholderFragment extends Fragment {
         private UiLifecycleHelper uiHelper;
         private Session.StatusCallback callback = new Session.StatusCallback() {
             @Override
@@ -101,5 +115,5 @@ public class LoinFacebook  extends Activity{
             uiHelper.onSaveInstanceState(outState);
         }
 
-    }
+    }*/
 }

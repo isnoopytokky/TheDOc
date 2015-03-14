@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">TheDoc</string>
 
-    <string name="title_section1">หัวข้อที่ 1</string>
-    <string name="title_section2">หัวข้อที่ 2</string>
-    <string name="title_section3">หัวข้อที่ 3</string>
+    <string name="title_section1">ป่วยอะไร</string>
+    <string name="title_section2">ประวัติป่วย</string>
+    <string name="title_section3">เข้าคิว</string>
+    <string name="title_section4">วิธีกินยา</string>
+    <string name="title_section5">เวชระเบียน</string>
+    <string name="title_section6">ข้อมูลผู้ใช้</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

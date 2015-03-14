@@ -1,6 +1,7 @@
 package com.project.thedoc;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
@@ -30,6 +31,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 
+
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
@@ -48,27 +50,6 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        try {
-            PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(),
-                    PackageManager.GET_SIGNATURES);
-            for (Signature signature : packageInfo.signatures) {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-            }
-        }
-        catch (PackageManager.NameNotFoundException e1) {
-            Log.e("Name not found", e1.toString());
-        }
-        catch (NoSuchAlgorithmException e) {
-            Log.e("No such an algorithm", e.toString());
-        }
-        catch (Exception e){
-            Log.e("Exception", e.toString());
-        }
-        */
-
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -81,23 +62,58 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
+
+        Fragment objFragment = null;
+
+        switch (position) {
+            case 0:
+                objFragment = new History();
+                break;
+            case 1:
+                objFragment = new SickType();
+                break;
+            case 2:
+                objFragment = new Queue();
+                break;
+            case 3:
+                objFragment = new Drug();
+                break;
+            case 4:
+                objFragment = new Hospital_Info();
+                break;
+            case 5:
+                objFragment = new User_Info();
+                break;
+
+        }
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, objFragment)
                 .commit();
+
     }
 
     public void onSectionAttached(int number) {
+        Intent i;
         switch (number) {
             case 1:
-                mTitle = getString(R.string.title_section1);
+                mTitle = getString(R.string.title_section2);
                 break;
             case 2:
-                mTitle = getString(R.string.title_section2);
+                mTitle = getString(R.string.title_section1);
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+                break;
+            case 4:
+                mTitle = getString(R.string.title_section4);
+                break;
+            case 5:
+                mTitle = getString(R.string.title_section5);
+                break;
+            case 6:
+                mTitle = getString(R.string.title_section6);
                 break;
         }
     }
@@ -110,7 +126,7 @@ public class MainActivity extends ActionBarActivity
     }
 
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (!mNavigationDrawerFragment.isDrawerOpen()) {
             // Only show items in the action bar relevant to this screen
@@ -122,7 +138,7 @@ public class MainActivity extends ActionBarActivity
         }
         return super.onCreateOptionsMenu(menu);
     }
-
+*//*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -137,7 +153,7 @@ public class MainActivity extends ActionBarActivity
 
         return super.onOptionsItemSelected(item);
     }
-
+*/
     /**
      * A placeholder fragment containing a simple view.
      */

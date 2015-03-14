@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#58FAAC">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="คุณเคยมีประวัติโรงพยาบาลนี้หรือไม่"
+        android:layout_marginTop="300px"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="220px"
+        android:layout_marginRight="200px">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="มี"
+            android:id="@+id/btn_yes" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ไม่มี"
+            android:layout_weight="1"
+            android:id="@+id/btn_no"
+            android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
