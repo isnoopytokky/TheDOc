@@ -1,8 +1,5 @@
 package com.project.thedoc;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -33,6 +30,7 @@ public class History extends Fragment {
                 switch (v.getId()) {
                     case R.id.btn_no:
                         objFragment = new Hospital_Info();
+                       // objFragment = new SimpleScannerFragment();
                         break;
                 }
                 // update the main content by replacing fragments

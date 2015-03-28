@@ -10,9 +10,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 /**
- * Created by Pariwat on 14/3/2558.
+ * Created by Pariwat on 10/3/2558.
  */
-public class Queue extends Fragment {
+public class Web_view extends Fragment{
     View rootview;
     @Nullable
     @Override
@@ -23,7 +23,8 @@ public class Queue extends Fragment {
 
         WebSettings webSettings = webview.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webview.loadUrl("http://deafhelper.parseapp.com/mainpage");
+        webview.loadUrl("http://beta.html5test.com/");
+
         return rootview;
     }
 

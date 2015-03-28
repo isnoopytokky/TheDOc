@@ -18,7 +18,10 @@ android {
         }
     }
 }
-repositories { mavenCentral() }
+repositories {
+    mavenCentral()
+
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
@@ -26,4 +29,5 @@ dependencies {
     compile project(':dynamicgrid')
     compile 'com.parse.bolts:bolts-android:1.2.0'
     compile files('libs/Parse-1.9.0.jar')
+    compile 'me.dm7.barcodescanner:zxing:1.6.3'
 }
