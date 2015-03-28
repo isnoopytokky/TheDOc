@@ -46,7 +46,7 @@ public class DynamicAdapter extends BaseDynamicGridAdapter {
         void build(String title) {
 
             titleText.setText(title);
-            image.setImageResource(R.drawable.icon);
+            image.setImageResource(R.drawable.a);
             //image.setAlpha(Alpha_90);
         }
     }

@@ -2,27 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#0B3B24"
-    android:layout_marginLeft="10px"
-    android:layout_marginRight="10px">
+    android:background="#0B3B24">
 
     <ImageView
         android:id="@+id/grid_item_image"
-        android:layout_width="230px"
+        android:layout_width="250px"
         android:layout_height="230px"
-        android:src="@drawable/icon" >
+        android:src="@drawable/a" >
     </ImageView>
     <ImageView
         android:id="@+id/grid_item_image1"
-        android:layout_width="230px"
+        android:layout_width="250px"
         android:layout_height="230px"
-        android:src="@drawable/icon" >
+        android:src="@drawable/a" >
     </ImageView>
     <ImageView
         android:id="@+id/grid_item_image2"
-        android:layout_width="230px"
+        android:layout_width="250px"
         android:layout_height="230px"
-        android:src="@drawable/icon" >
+        android:src="@drawable/a" >
     </ImageView>
     <TextView
         android:id="@+id/grid_item_title"

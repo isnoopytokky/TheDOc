@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#58FAAC">
+    android:background="#18B495">
 
 
     <TextView
@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="ข้อมูลผู้ป่วย"
+        android:textSize="40px"
         android:layout_marginTop="30px"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
@@ -150,13 +151,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="เสร็จสิ้น"
                 android:id="@+id/button_complete"
+                android:background="@drawable/mybutton"
                 android:layout_gravity="center_horizontal" />
         </LinearLayout>
         </LinearLayout>

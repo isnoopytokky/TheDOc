@@ -36,7 +36,6 @@ public class Contact_Detail  extends Fragment {
         });
 
 
-
         return rootview;
     }
 

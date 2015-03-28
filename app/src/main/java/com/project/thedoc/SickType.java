@@ -151,7 +151,7 @@ public class SickType extends Fragment {
                 Toast.makeText(getActivity(), parent.getAdapter().getItem(position).toString(),
                         Toast.LENGTH_SHORT).show();
                 image = (ImageView) view.findViewById(R.id.grid_item_image);
-                image.setImageResource(R.drawable.ic_drawer);
+                image.setImageResource(R.drawable.a_gray);
 
                 //view.setBackgroundColor(Color.RED);
                 Items_Boolean.put(
@@ -160,12 +160,12 @@ public class SickType extends Fragment {
                 );
                 if(Items_Boolean.get(parent.getAdapter().getItem(position).toString()) == true)
                 {
-                    image.setImageResource(R.drawable.ic_drawer);
+                    image.setImageResource(R.drawable.a_gray);
                     //image.setAlpha(Alpha_100);
                 }
                 else
                 {
-                    image.setImageResource(R.drawable.icon);
+                    image.setImageResource(R.drawable.a);
                     //image.setAlpha(Alpha_90);
                 }
             }

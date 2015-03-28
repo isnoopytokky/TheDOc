@@ -4,12 +4,11 @@
     android:layout_height="match_parent"
     android:background="#18B495">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="กรุณาไปติดต่อห้องที่ให้ตรวจ"
+        android:text="กรุณาแสกน QR Code หน้าห้องตรวจ"
         android:layout_marginTop="70px"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
@@ -26,11 +25,10 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="ไปห้องตรวจ"
+        android:text="เริ่มแสกน"
         android:layout_marginTop="10dp"
-        android:id="@+id/button_check"
+        android:id="@+id/button_scan"
         android:background="@drawable/mybutton"
         android:layout_gravity="center_horizontal" />
-
 
 </LinearLayout>

@@ -2,39 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#58FAAC">
+    android:background="#18B495">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="คุณเคยมีประวัติโรงพยาบาลนี้หรือไม่"
-        android:layout_marginTop="300px"
-        android:id="@+id/textView"
+        android:text="คุณเคยมีประวัติ"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="40px"
+        android:layout_marginTop="350px"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="โรงพยาบาลนี้หรือไม่"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="40px"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="220px"
-        android:layout_marginRight="200px">
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" >
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton"
             android:text="มี"
             android:id="@+id/btn_yes" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton"
             android:text="ไม่มี"
-            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
             android:id="@+id/btn_no"
             android:layout_gravity="right"/>
 
