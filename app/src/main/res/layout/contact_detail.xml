@@ -9,31 +9,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="วันนี้ป่วยอะไร ? "
-        android:layout_marginTop="20px"
+        android:text="กรุณาไปติดต่อห้องที่ให้ตรวจ"
+        android:layout_marginTop="70px"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="90px"
+        android:layout_height="361dp"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_centerVertical="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="บันทึก"
-        android:id="@+id/button_save"
+        android:text="ไปห้องตรวจ"
+        android:id="@+id/button_check"
         android:layout_gravity="center_horizontal" />
-
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gridView"
-        android:layout_gravity="center_horizontal" />
-
-    <org.askerov.dynamicgrid.DynamicGridView
-        android:id="@+id/dynamic_grid"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:numColumns="3"
-        />
 
 
 </LinearLayout>

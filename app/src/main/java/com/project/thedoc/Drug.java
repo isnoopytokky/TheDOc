@@ -15,7 +15,7 @@ public class Drug extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootview = inflater.inflate(R.layout.drug, container, false);
+        rootview = inflater.inflate(R.layout.contact_detail, container, false);
         return rootview;
     }
 

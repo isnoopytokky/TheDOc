@@ -1,12 +1,16 @@
 package com.project.thedoc;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -25,9 +29,6 @@ public class SickType extends Fragment {
     View rootview;
     private ImageView image;
 
-    static final String[] MOBILE_OS = new String[] { "Android", "iOS",
-            "Windows", "Blackberry" };
-
     static final String[] Items_List = new String[] {
             "Case1",
             "Case2",
@@ -37,11 +38,22 @@ public class SickType extends Fragment {
             "Case6",
             "Case7",
             "Case8",
-            "Case9"
+            "Case9",
+            "Case10",
+            "Case11",
+            "Case12",
+            "Case13",
+            "Case14",
+            "Case15",
+            "Case16",
+            "Case17",
+            "Case18"
     };
 
     final Map<String, Boolean> Items_Boolean = new HashMap<String, Boolean>();
     Boolean a = false;
+    String GetSickType = "" ;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -55,11 +67,72 @@ public class SickType extends Fragment {
         Items_Boolean.put("Case7", false);
         Items_Boolean.put("Case8", false);
         Items_Boolean.put("Case9", false);
+        Items_Boolean.put("Case10", false);
+        Items_Boolean.put("Case11", false);
+        Items_Boolean.put("Case12", false);
+        Items_Boolean.put("Case13", false);
+        Items_Boolean.put("Case14", false);
+        Items_Boolean.put("Case15", false);
+        Items_Boolean.put("Case16", false);
+        Items_Boolean.put("Case17", false);
+        Items_Boolean.put("Case18", false);
 
         rootview = inflater.inflate(R.layout.sick_type, container, false);
 
+
         GridView gridview = (GridView) rootview.findViewById(R.id.gridView);
         gridview = (DynamicGridView) rootview.findViewById(R.id.dynamic_grid);
+        Button Btn_Save = (Button) rootview.findViewById(R.id.button_save);
+
+        Btn_Save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GetSickType = "" ;
+                for(int i=0; i<Items_Boolean.size();i++)
+                {
+                    if(Items_Boolean.get(Items_List[i]) == true)
+                    {
+                        if(GetSickType != "")
+                        {
+                            GetSickType += "\n" + Items_List[i];
+                        }else
+                        {
+                            GetSickType += Items_List[i];
+                        }
+                    }
+                }
+
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(rootview.getContext());
+                builder1.setMessage(GetSickType);
+                builder1.setTitle("อาการป่วยของคุณ");
+                builder1.setCancelable(true);
+                builder1.setPositiveButton("แก้ไข",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+
+                            }
+                        });
+                builder1.setNegativeButton("ยืนยัน",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                Fragment objFragment = null;
+                                objFragment = new Contact_Detail();
+                                FragmentManager fragmentManager =getFragmentManager();
+                                fragmentManager.beginTransaction()
+                                        .replace(R.id.container, objFragment)
+                                        .commit();
+
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
+            }
+        });
+
         gridview.setAdapter(new DynamicAdapter(getActivity(),
                 new ArrayList<String>(Arrays.asList(Items_List)),
                 getResources().getInteger(R.integer.column_count)));

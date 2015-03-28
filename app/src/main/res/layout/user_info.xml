@@ -9,12 +9,159 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="ข้อมูลผู้ใช้"
-        android:layout_marginTop="300px"
+        android:text="ข้อมูลผู้ป่วย"
+        android:layout_marginTop="30px"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 
 
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50px"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llPlayersName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="ฉันชื่อ "
+                android:id="@+id/textView4" />
+
+            <EditText
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:editable="false"
+                android:text=""
+                android:ems="15"
+                android:id="@+id/editText3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="นามสกุล "
+                android:id="@+id/textView5" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:editable="false"
+                android:text=""
+                android:ems="15"
+                android:id="@+id/editText4" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="มีอาการ "
+                    android:id="@+id/textView6" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:editable="false"
+                    android:text=""
+                    android:ems="15"
+                    android:id="@+id/editText5" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="ต้องการใช้สิทธิ "
+                    android:id="@+id/textView7" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:editable="false"
+                    android:text=""
+                    android:ems="15"
+                    android:id="@+id/editText8" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="(มี/ไม่มี)ประวัติการแพ้ยา "
+                    android:id="@+id/textView8" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:editable="false"
+                    android:text=""
+                    android:ems="15"
+                    android:id="@+id/editText9" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="(มี/ไม่มี)โรคประจำตัว "
+                    android:id="@+id/textView9" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:editable="false"
+                    android:text=""
+                    android:ems="15"
+                    android:id="@+id/editText10" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="เสร็จสิ้น"
+                android:id="@+id/button_complete"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
 
 
 
