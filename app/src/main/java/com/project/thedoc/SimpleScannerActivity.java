@@ -2,7 +2,6 @@ package com.project.thedoc;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Toast;
 
@@ -38,14 +37,6 @@ public class SimpleScannerActivity extends Fragment implements ZXingScannerView.
         Toast.makeText(this.getActivity(), "Contents = " + rawResult.getText() +
                 ", Format = " + rawResult.getBarcodeFormat().toString(), Toast.LENGTH_SHORT).show();
         mScannerView.stopCamera();
-        Fragment objFragment = null;
-        objFragment = new Web_view();
-        // update the main content by replacing fragments
-        FragmentManager fragmentManager =getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, objFragment)
-                .commit();
-
 
     }
 }

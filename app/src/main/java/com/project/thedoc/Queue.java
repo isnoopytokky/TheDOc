@@ -23,7 +23,7 @@ public class Queue extends Fragment {
 
         WebSettings webSettings = webview.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webview.loadUrl("http://deafhelper.parseapp.com/mainpage");
+        webview.loadUrl("http://deafhelper.parseapp.com/queue_information/VMeoDcRp9G");
         return rootview;
     }
 

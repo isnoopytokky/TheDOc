@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TheDoc</string>
+    <string name="app_name">Deaf Helper</string>
 
     <string name="title_section1">ป่วยอะไร</string>
     <string name="title_section2">ประวัติป่วย</string>

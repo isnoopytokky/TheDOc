@@ -30,6 +30,7 @@ public class AskName extends Fragment {
                 switch (v.getId()) {
                     case R.id.button_next:
                         objFragment = new AppointmentDate();
+                        // objFragment = new SimpleScannerFragment();
                         break;
                 }
                 // update the main content by replacing fragments

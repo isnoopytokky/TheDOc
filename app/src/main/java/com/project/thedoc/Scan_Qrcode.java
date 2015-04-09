@@ -14,6 +14,7 @@ import android.widget.Button;
  */
 public class Scan_Qrcode extends Fragment{
     View rootview;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

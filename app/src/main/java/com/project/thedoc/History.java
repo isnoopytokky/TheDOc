@@ -15,11 +15,11 @@ import android.widget.Button;
 public class History extends Fragment {
 
     View rootview;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootview = inflater.inflate(R.layout.history, container, false);
-
 
         Button button_no = (Button) rootview.findViewById(R.id.btn_no);
         button_no.setOnClickListener(new View.OnClickListener() {

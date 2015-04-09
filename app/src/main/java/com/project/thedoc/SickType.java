@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import org.askerov.dynamicgrid.DynamicGridView;
 
@@ -27,6 +26,7 @@ import java.util.Map;
  */
 public class SickType extends Fragment {
     View rootview;
+
     private ImageView image;
 
     static final String[] Items_List = new String[] {
@@ -41,13 +41,7 @@ public class SickType extends Fragment {
             "Case9",
             "Case10",
             "Case11",
-            "Case12",
-            "Case13",
-            "Case14",
-            "Case15",
-            "Case16",
-            "Case17",
-            "Case18"
+            "Case12"
     };
 
     final Map<String, Boolean> Items_Boolean = new HashMap<String, Boolean>();
@@ -70,14 +64,22 @@ public class SickType extends Fragment {
         Items_Boolean.put("Case10", false);
         Items_Boolean.put("Case11", false);
         Items_Boolean.put("Case12", false);
-        Items_Boolean.put("Case13", false);
-        Items_Boolean.put("Case14", false);
-        Items_Boolean.put("Case15", false);
-        Items_Boolean.put("Case16", false);
-        Items_Boolean.put("Case17", false);
-        Items_Boolean.put("Case18", false);
-
         rootview = inflater.inflate(R.layout.sick_type, container, false);
+
+        final ArrayList SickTypeName = new ArrayList();
+        SickTypeName.add("มีไข้");
+        SickTypeName.add("ไอ");
+        SickTypeName.add("คลืนไส้");
+        SickTypeName.add("ปวดหัว");
+        SickTypeName.add("ตาแดง");
+        SickTypeName.add("เจ็บคอ");
+        SickTypeName.add("ร้อนใน");
+        SickTypeName.add("ผื่นคัน");
+        SickTypeName.add("ปวดข้อ");
+        SickTypeName.add("ท้องเสีย");
+        SickTypeName.add("ปัสสาวะสีเข้ม");
+        SickTypeName.add("เลือดออก");
+
 
 
         GridView gridview = (GridView) rootview.findViewById(R.id.gridView);
@@ -94,10 +96,10 @@ public class SickType extends Fragment {
                     {
                         if(GetSickType != "")
                         {
-                            GetSickType += "\n" + Items_List[i];
+                            GetSickType += "\n" + SickTypeName.get(i);
                         }else
                         {
-                            GetSickType += Items_List[i];
+                            GetSickType += SickTypeName.get(i);
                         }
                     }
                 }
@@ -148,25 +150,93 @@ public class SickType extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int Alpha_100 = 100;
                 int Alpha_90 = 90;
-                Toast.makeText(getActivity(), parent.getAdapter().getItem(position).toString(),
-                        Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(), parent.getAdapter().getItem(position).toString(),
+                        //Toast.LENGTH_SHORT).show();
                 image = (ImageView) view.findViewById(R.id.grid_item_image);
-                image.setImageResource(R.drawable.a_gray);
 
                 //view.setBackgroundColor(Color.RED);
                 Items_Boolean.put(
                         parent.getAdapter().getItem(position).toString(),
                         !Items_Boolean.get(parent.getAdapter().getItem(position).toString())
                 );
-                if(Items_Boolean.get(parent.getAdapter().getItem(position).toString()) == true)
+
+                if(Items_Boolean.get(parent.getAdapter().getItem(position).toString()) == false)
                 {
-                    image.setImageResource(R.drawable.a_gray);
-                    //image.setAlpha(Alpha_100);
+                    if(position == 0) {
+                        image.setImageResource(R.drawable.case_one);
+                    }
+                    if(position == 1) {
+                        image.setImageResource(R.drawable.case_two);
+                    }
+                    if(position == 2) {
+                        image.setImageResource(R.drawable.case_three);
+                    }
+                    if(position == 3) {
+                        image.setImageResource(R.drawable.case_four);
+                    }
+                    if(position == 4) {
+                        image.setImageResource(R.drawable.case_five);
+                    }
+                    if(position == 5) {
+                        image.setImageResource(R.drawable.case_six);
+                    }
+                    if(position == 6) {
+                        image.setImageResource(R.drawable.case_seven);
+                    }
+                    if(position == 7) {
+                        image.setImageResource(R.drawable.case_eigth);
+                    }
+                    if(position == 8) {
+                        image.setImageResource(R.drawable.case_nine);
+                    }
+                    if(position == 9) {
+                        image.setImageResource(R.drawable.case_ten);
+                    }
+                    if(position == 10) {
+                        image.setImageResource(R.drawable.case_eleven);
+                    }
+                    if(position == 11) {
+                        image.setImageResource(R.drawable.case_twelve);
+                    }
+
                 }
-                else
-                {
-                    image.setImageResource(R.drawable.a);
-                    //image.setAlpha(Alpha_90);
+                else {
+                    if(position == 0) {
+                        image.setImageResource(R.drawable.case_one_gray);
+                    }
+                    if (position == 1) {
+                        image.setImageResource(R.drawable.case_two_gray);
+                    }
+                    if (position == 2) {
+                        image.setImageResource(R.drawable.case_three_gray);
+                    }
+                    if (position == 3) {
+                        image.setImageResource(R.drawable.case_four_gray);
+                    }
+                    if (position == 4) {
+                        image.setImageResource(R.drawable.case_five_gray);
+                    }
+                    if (position == 5) {
+                        image.setImageResource(R.drawable.case_six_gray);
+                    }
+                    if (position == 6) {
+                        image.setImageResource(R.drawable.case_seven_gray);
+                    }
+                    if (position == 7) {
+                        image.setImageResource(R.drawable.case_eight_gray);
+                    }
+                    if (position == 8) {
+                        image.setImageResource(R.drawable.case_nine_gray);
+                    }
+                    if (position == 9) {
+                        image.setImageResource(R.drawable.case_ten_gray);
+                    }
+                    if (position == 10) {
+                        image.setImageResource(R.drawable.case_eleven_gray);
+                    }
+                    if (position == 11) {
+                        image.setImageResource(R.drawable.case_twelve_gray);
+                    }
                 }
             }
         });

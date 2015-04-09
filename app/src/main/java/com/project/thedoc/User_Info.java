@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 /**
@@ -37,8 +39,11 @@ public class User_Info extends Fragment{
             }
         });
 
+        WebView webview =  (WebView) rootview.findViewById(R.id.activity_main_webview_user);
 
-
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.loadUrl("http://deafhelper.parseapp.com/add_data");
+        webview.setWebViewClient(new WebViewClient());
         return rootview;
     }
 

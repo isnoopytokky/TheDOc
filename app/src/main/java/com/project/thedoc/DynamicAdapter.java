@@ -45,9 +45,54 @@ public class DynamicAdapter extends BaseDynamicGridAdapter {
 
         void build(String title) {
 
-            titleText.setText(title);
-            image.setImageResource(R.drawable.a);
-            //image.setAlpha(Alpha_90);
-        }
+            if(title == "Case1") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_one);
+            }
+            if(title == "Case2") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_two);
+            }
+            if(title == "Case3") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_three);
+            }
+            if(title == "Case4") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_four);
+            }
+            if(title == "Case5") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_five);
+            }
+            if(title == "Case6") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_six);
+            }
+            if(title == "Case7") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_seven);
+            }
+            if(title == "Case8") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_eigth);
+            }
+            if(title == "Case9") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_nine);
+            }
+            if(title == "Case10") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_ten);
+            }
+            if(title == "Case11") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_eleven);
+            }
+            if(title == "Case12") {
+                titleText.setText(title);
+                image.setImageResource(R.drawable.case_twelve);
+            }
+         }
     }
 }

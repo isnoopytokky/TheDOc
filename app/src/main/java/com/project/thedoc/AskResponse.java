@@ -10,25 +10,26 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 /**
- * Created by Pariwat on 10/3/2558.
+ * Created by Pariwat on 4/4/2558.
  */
-public class AppointmentDate extends Fragment {
+public class AskResponse extends Fragment {
     View rootview;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootview = inflater.inflate(R.layout.appointment_date, container, false);
+        rootview = inflater.inflate(R.layout.ask_reponse, container, false);
 
-        Button btn_yes_ad = (Button) rootview.findViewById(R.id.btn_yes_ap);
-        Button btn_no_ad = (Button) rootview.findViewById(R.id.btn_no_ap);
+        Button btn_yes_res = (Button) rootview.findViewById(R.id.btn_yes_res);
+        Button btn_no_res = (Button) rootview.findViewById(R.id.btn_no_res);
 
-        btn_yes_ad.setOnClickListener(new View.OnClickListener() {
+        btn_yes_res.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment objFragment = null;
                 switch (v.getId()) {
-                    case R.id.btn_yes_ap:
-                        objFragment = new AskResponse();
+                    case R.id.btn_yes_res:
+                        objFragment = new SickType();
+                        // objFragment = new SimpleScannerFragment();
                         break;
                 }
                 // update the main content by replacing fragments
@@ -39,13 +40,14 @@ public class AppointmentDate extends Fragment {
             }
         });
 
-        btn_no_ad.setOnClickListener(new View.OnClickListener() {
+        btn_no_res.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment objFragment = null;
                 switch (v.getId()) {
-                    case R.id.btn_no_ap:
-                        objFragment = new AskResponse();
+                    case R.id.btn_no_res:
+                        objFragment = new SickType();
+                        // objFragment = new SimpleScannerFragment();
                         break;
                 }
                 // update the main content by replacing fragments
@@ -55,8 +57,8 @@ public class AppointmentDate extends Fragment {
                         .commit();
             }
         });
+
 
         return rootview;
     }
-
 }
